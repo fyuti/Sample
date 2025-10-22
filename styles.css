@@ -1,4 +1,4 @@
-/* Reset some basic styles */
+/* General styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: hsl(194, 56%, 50%); /* Light blue background */
+  background-color: hsl(194, 56%, 50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,122 +15,74 @@ body {
   padding: 20px;
 }
 
-/* Container for centering the profile card */
 .container {
   width: 100%;
-  max-width: 1100px; /* Max width for the profile card */
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Profile card style */
-.profile-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  max-width: 100%;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Avatar image and details layout */
-.profile-avatar {
-  flex: 1;
-  max-width: 200px;
-  margin-right: 20px;
-}
-
-.profile-avatar img {
-  width: 100%;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Text and bio layout */
-header {
-  flex: 2;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-/* Social links styling */
-.social-links ul {
+nav ul {
   list-style: none;
   padding: 0;
 }
 
-.social-links li {
-  display: inline-block;
-  margin-right: 15px;
+nav li {
+  display: inline;
+  margin-right: 20px;
 }
 
-.social-links a {
+nav a {
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
-.social-links a:hover {
+nav a:hover {
   color: #0056b3;
 }
 
-/* Hobbies and dislikes layout */
-section {
-  flex-basis: 100%;
-  margin-top: 20px;
+/* Page Section Styles */
+.page-section {
+  display: none; /* Hide all sections by default */
 }
 
-section h3 {
-  font-size: 1.5rem;
-  color: #333;
+#contact-us-section {
+  display: block; /* Show Contact Us by default */
+}
+
+/* Success & Error Messages */
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Fields */
+input, textarea {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-ul {
-  list-style: disc;
-  margin-left: 20px;
-  color: #555;
-}
-
-ul li {
-  margin-bottom: 5px;
-}
-
-/* Mobile responsiveness */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .profile-card {
-    flex-direction: column;
+  .page-section {
     text-align: center;
-  }
-
-  .profile-avatar {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  header {
-    text-align: center;
-  }
-
-  .social-links {
-    text-align: center;
-  }
-
-  .social-links li {
-    display: inline-block;
-    margin-bottom: 10px;
   }
 }
